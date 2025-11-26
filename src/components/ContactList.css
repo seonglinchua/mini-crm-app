@@ -1,0 +1,94 @@
+.contact-list-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-list-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contact-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.contact-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-name {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.contact-company {
+  margin: 0 0 2px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.contact-title {
+  margin: 0;
+  font-size: 13px;
+  color: #888;
+}
+
+@media (prefers-color-scheme: dark) {
+  .contact-list-container h1 {
+    color: #f0f0f0;
+  }
+
+  .contact-card {
+    background-color: #2a2a2a;
+  }
+
+  .contact-name {
+    color: #f0f0f0;
+  }
+
+  .contact-company {
+    color: #aaa;
+  }
+
+  .contact-title {
+    color: #888;
+  }
+}
