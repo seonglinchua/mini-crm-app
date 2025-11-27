@@ -9,8 +9,9 @@ function Dashboard() {
   // Calculate statistics
   const totalContacts = contacts.length;
   const uniqueCompanies = [...new Set(contacts.map(c => c.company))].length;
+  const contactsWithNotes = contacts.filter(c => c.notes && c.notes.trim().length > 0).length;
 
-  // Get recent contacts (last 3)
+  // Get recent contacts (first 3 from the list - in a real app, this would be sorted by date)
   const recentContacts = contacts.slice(0, 3);
 
   // Filter contacts based on search query
@@ -44,10 +45,10 @@ function Dashboard() {
           </div>
         </div>
         <div className="stat-card">
-          <div className="stat-icon active-icon">✅</div>
+          <div className="stat-icon active-icon">📝</div>
           <div className="stat-content">
-            <span className="stat-number">{totalContacts}</span>
-            <span className="stat-label">Active</span>
+            <span className="stat-number">{contactsWithNotes}</span>
+            <span className="stat-label">With Notes</span>
           </div>
         </div>
       </section>
