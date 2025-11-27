@@ -5,7 +5,7 @@ import './App.css';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/mini-crm-app">
       <div className="app">
         <Routes>
           <Route path="/" element={<ContactList />} />
