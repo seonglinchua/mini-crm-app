@@ -5,6 +5,7 @@ import './ContactList.css';
 function ContactList() {
   return (
     <div className="contact-list-container">
+      <Link to="/" className="back-link">← Back to Dashboard</Link>
       <h1>Contacts</h1>
       <div className="contact-list">
         {contacts.map((contact) => (
